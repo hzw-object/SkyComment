@@ -1,0 +1,16 @@
+2025-07-15 17:42:54.586 | ERROR    | taobao_crawler:start:58 - 启动失败: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║
+║                                                                                                ║
+║ <3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+2025-07-15 17:43:29.559 | INFO     | taobao_crawler:_navigate_to_live_room:66 - 正在访问直播间: https://live.taobao.com/live/526803428124
+2025-07-15 17:43:40.178 | WARNING  | taobao_crawler:_check_live_room_status:93 - 未找到弹幕区域，可能需要手动处理
+2025-07-15 17:43:40.179 | INFO     | taobao_crawler:_check_live_room_status:95 - 直播间加载成功
+2025-07-15 17:43:40.179 | INFO     | taobao_crawler:_start_comment_monitoring:104 - 开始监听弹幕...
+2025-07-15 17:43:40.182 | ERROR    | taobao_crawler:_start_comment_monitoring:127 - 监听弹幕时发生错误: object NoneType can't be used in 'await' expression
+2025-07-15 17:43:40.234 | INFO     | taobao_crawler:_save_comments:227 - 已保存 0 条弹幕到 taobao_526803428124_20250715_174329.json
+2025-07-15 17:43:40.235 | INFO     | taobao_crawler:_cleanup:242 - 清理完成

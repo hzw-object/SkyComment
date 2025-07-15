@@ -32,7 +32,7 @@ class TaobaoCrawler:
             async with async_playwright() as p:
                 # 启动浏览器
                 self.browser = await p.chromium.launch(
-                    headless=False,  # 设置为 True 可以无头模式运行
+                    headless=True,  # 设置为 True 可以无头模式运行
                     args=[
                         '--disable-blink-features=AutomationControlled',
                         '--disable-web-security',

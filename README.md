@@ -19,6 +19,7 @@
 运行自动安装脚本：
 
 ```bash
+# python v3.10
 python install.py
 ```
 
@@ -26,14 +27,14 @@ python install.py
 
 ```bash
 pip install -r requirements.txt
-playwright install chromium
+python -m playwright install chromium
 ```
 
 ### 2. 获取直播间ID
 
 #### 抖音直播间
 - 打开抖音直播间页面
-- 从URL中获取直播间ID，例如：`https://live.douyin.com/123456789` 中的 `123456789`
+- 从URL中获取直播间ID，例如：`https://live.douyin.com/123456789` 中的 `561075751286`
 
 #### 淘宝直播间
 - 打开淘宝直播间页面
@@ -58,7 +59,7 @@ python example.py --platform douyin --room_id 123456789 --output my_comments.jso
 
 ```bash
 # 抖音直播间弹幕抓取
-python douyin_crawler.py --room_id 123456789 --output douyin_comments.json
+python douyin_crawler.py --room_id 561075751286 --output douyin_comments.json
 
 # 淘宝直播间弹幕抓取
 python taobao_crawler.py --room_id 987654321 --output taobao_comments.json

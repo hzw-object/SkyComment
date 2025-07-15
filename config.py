@@ -20,7 +20,7 @@ class Config:
     
     # 浏览器配置
     BROWSER_CONFIG = {
-        "headless": False,  # 是否无头模式
+        "headless": True,  # 是否无头模式
         "args": [
             '--disable-blink-features=AutomationControlled',
             '--disable-web-security',

@@ -32,7 +32,7 @@ class DouyinCrawler:
             async with async_playwright() as p:
                 # 启动浏览器
                 self.browser = await p.chromium.launch(
-                    headless=False,  # 设置为 True 可以无头模式运行
+                    headless=True,  # 设置为 True 可以无头模式运行
                     args=[
                         '--disable-blink-features=AutomationControlled',
                         '--disable-web-security',
@@ -134,7 +134,7 @@ class DouyinCrawler:
             if "webcast/im/fetch" in request.url or "webcast/im/push" in request.url:
                 response = await route.fetch()
                 
-                if response.ok:
+                if response and response.ok:
                     try:
                         data = await response.json()
                         await self._extract_comments_from_response(data)
@@ -147,20 +147,24 @@ class DouyinCrawler:
             logger.error(f"处理网络请求失败: {e}")
             await route.continue_()
     
-    async def _handle_websocket(self, websocket):
-        """处理WebSocket连接"""
+    def _handle_websocket(self, websocket):
+        """处理WebSocket连接（同步函数）"""
         logger.info(f"WebSocket连接: {websocket.url}")
-        
-        async def handle_message(msg):
+
+        def handle_message(msg):
             try:
                 if msg.type == "text":
                     data = json.loads(msg.text)
-                    await self._extract_comments_from_websocket(data)
+                    # 用异步任务调度
+                    asyncio.create_task(self._extract_comments_from_websocket(data))
             except Exception as e:
                 logger.error(f"处理WebSocket消息失败: {e}")
-        
-        websocket.on("framesent", handle_message)
-        websocket.on("framereceived", handle_message)
+
+        try:
+            websocket.on("framesent", handle_message)
+            websocket.on("framereceived", handle_message)
+        except Exception as e:
+            logger.error(f"添加WebSocket事件监听器失败: {e}")
     
     async def _extract_comments_from_response(self, data: Dict):
         """从API响应中提取弹幕"""

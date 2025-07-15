@@ -1,0 +1,106 @@
+2025-07-15 16:47:22.040 | ERROR    | douyin_crawler:start:58 - 启动失败: 
+╔══════════════════════════════════════════════════════╗
+║ Host system is missing dependencies to run browsers. ║
+║ Please install them with the following command:      ║
+║                                                      ║
+║     sudo playwright install-deps                     ║
+║                                                      ║
+║ Alternatively, use apt:                              ║
+║     sudo apt-get install libatk1.0-0\                ║
+║         libatk-bridge2.0-0\                          ║
+║         libcups2\                                    ║
+║         libatspi2.0-0\                               ║
+║         libxcomposite1\                              ║
+║         libxdamage1                                  ║
+║                                                      ║
+║ <3 Playwright Team                                   ║
+╚══════════════════════════════════════════════════════╝
+2025-07-15 16:48:38.553 | ERROR    | __main__:start:58 - 启动失败: 
+╔══════════════════════════════════════════════════════╗
+║ Host system is missing dependencies to run browsers. ║
+║ Please install them with the following command:      ║
+║                                                      ║
+║     sudo playwright install-deps                     ║
+║                                                      ║
+║ Alternatively, use apt:                              ║
+║     sudo apt-get install libatk1.0-0\                ║
+║         libatk-bridge2.0-0\                          ║
+║         libcups2\                                    ║
+║         libatspi2.0-0\                               ║
+║         libxcomposite1\                              ║
+║         libxdamage1                                  ║
+║                                                      ║
+║ <3 Playwright Team                                   ║
+╚══════════════════════════════════════════════════════╝
+2025-07-15 16:55:17.299 | ERROR    | douyin_crawler:start:58 - 启动失败: 
+╔══════════════════════════════════════════════════════╗
+║ Host system is missing dependencies to run browsers. ║
+║ Please install them with the following command:      ║
+║                                                      ║
+║     sudo playwright install-deps                     ║
+║                                                      ║
+║ Alternatively, use apt:                              ║
+║     sudo apt-get install libatk1.0-0\                ║
+║         libatk-bridge2.0-0\                          ║
+║         libcups2\                                    ║
+║         libatspi2.0-0\                               ║
+║         libxcomposite1\                              ║
+║         libxdamage1                                  ║
+║                                                      ║
+║ <3 Playwright Team                                   ║
+╚══════════════════════════════════════════════════════╝
+2025-07-15 17:00:01.458 | ERROR    | douyin_crawler:start:58 - 启动失败: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║
+║                                                                                                ║
+║ <3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+2025-07-15 17:03:00.406 | ERROR    | douyin_crawler:start:58 - 启动失败: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║
+║                                                                                                ║
+║ <3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+2025-07-15 17:04:23.557 | INFO     | douyin_crawler:_navigate_to_live_room:66 - 正在访问直播间: https://live.douyin.com/561075751286
+2025-07-15 17:04:32.469 | WARNING  | douyin_crawler:_check_live_room_status:93 - 未找到弹幕区域，可能需要手动处理
+2025-07-15 17:04:32.469 | INFO     | douyin_crawler:_check_live_room_status:95 - 直播间加载成功
+2025-07-15 17:04:32.469 | INFO     | douyin_crawler:_start_comment_monitoring:104 - 开始监听弹幕...
+2025-07-15 17:04:32.472 | ERROR    | douyin_crawler:_start_comment_monitoring:124 - 监听弹幕时发生错误: object NoneType can't be used in 'await' expression
+2025-07-15 17:04:32.591 | INFO     | douyin_crawler:_save_comments:210 - 已保存 0 条弹幕到 douyin_561075751286_20250715_170422.json
+2025-07-15 17:04:32.591 | INFO     | douyin_crawler:_cleanup:225 - 清理完成
+2025-07-15 17:05:04.973 | ERROR    | __main__:start:58 - 启动失败: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run <your-playwright-app>' before running Playwright. ║
+║                                                                                                ║
+║ <3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+2025-07-15 17:05:56.787 | INFO     | __main__:_navigate_to_live_room:66 - 正在访问直播间: https://live.douyin.com/561075751286
+2025-07-15 17:06:05.862 | WARNING  | __main__:_check_live_room_status:93 - 未找到弹幕区域，可能需要手动处理
+2025-07-15 17:06:05.862 | INFO     | __main__:_check_live_room_status:95 - 直播间加载成功
+2025-07-15 17:06:05.863 | INFO     | __main__:_start_comment_monitoring:104 - 开始监听弹幕...
+2025-07-15 17:06:05.866 | ERROR    | __main__:_start_comment_monitoring:124 - 监听弹幕时发生错误: object NoneType can't be used in 'await' expression
+2025-07-15 17:06:05.975 | INFO     | __main__:_save_comments:210 - 已保存 0 条弹幕到 douyin_comments.json
+2025-07-15 17:06:05.976 | INFO     | __main__:_cleanup:225 - 清理完成
+2025-07-15 17:07:21.153 | INFO     | douyin_crawler:_navigate_to_live_room:66 - 正在访问直播间: https://live.douyin.com/561075751286
+2025-07-15 17:07:30.308 | WARNING  | douyin_crawler:_check_live_room_status:93 - 未找到弹幕区域，可能需要手动处理
+2025-07-15 17:07:30.308 | INFO     | douyin_crawler:_check_live_room_status:95 - 直播间加载成功
+2025-07-15 17:07:30.308 | INFO     | douyin_crawler:_start_comment_monitoring:104 - 开始监听弹幕...
+2025-07-15 17:07:30.311 | ERROR    | douyin_crawler:_start_comment_monitoring:124 - 监听弹幕时发生错误: object NoneType can't be used in 'await' expression
+2025-07-15 17:07:30.363 | INFO     | douyin_crawler:_save_comments:214 - 已保存 0 条弹幕到 douyin_561075751286_20250715_170720.json
+2025-07-15 17:07:30.363 | INFO     | douyin_crawler:_cleanup:229 - 清理完成
+2025-07-15 17:08:35.425 | INFO     | __main__:_navigate_to_live_room:66 - 正在访问直播间: https://live.douyin.com/561075751286
+2025-07-15 17:08:44.557 | WARNING  | __main__:_check_live_room_status:93 - 未找到弹幕区域，可能需要手动处理
+2025-07-15 17:08:44.557 | INFO     | __main__:_check_live_room_status:95 - 直播间加载成功
+2025-07-15 17:08:44.558 | INFO     | __main__:_start_comment_monitoring:104 - 开始监听弹幕...
+2025-07-15 17:08:44.560 | ERROR    | __main__:_start_comment_monitoring:124 - 监听弹幕时发生错误: object NoneType can't be used in 'await' expression
+2025-07-15 17:08:44.611 | INFO     | __main__:_save_comments:214 - 已保存 0 条弹幕到 douyin_comments.json
+2025-07-15 17:08:44.611 | INFO     | __main__:_cleanup:229 - 清理完成
